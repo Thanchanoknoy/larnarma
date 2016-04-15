@@ -20,25 +20,25 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- 
 
 CREATE TABLE `menus` (
-  `id` int(10) NOT NULL,
+  `id` int(10) NOT NULL auto_increment,
   `name` varchar(40) NOT NULL,
   `price` int(20) NOT NULL,
   `picture` varchar(60) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 -- 
 -- dump ตาราง `menus`
 -- 
 
-INSERT INTO `menus` VALUES (0, 'Thai Fried Noodles', 150, '/larnarhan/image-menus/img1.jpg');
-INSERT INTO `menus` VALUES (1, 'grilled prawns', 450, '/larnarhan/image-menus/img2.jpg');
-INSERT INTO `menus` VALUES (2, 'Honey rost duck', 500, '/larnarhan/image-menus/img4.jpg');
-INSERT INTO `menus` VALUES (3, 'steamed blanched clams', 150, '/larnarhan/image-menus/img3.jpg');
-INSERT INTO `menus` VALUES (4, 'Tom Yum Kung', 250, '/larnarhan/image-menus/img5.jpg');
-INSERT INTO `menus` VALUES (5, 'Fried Chicken', 150, '/larnarhan/image-menus/img6.jpg');
-INSERT INTO `menus` VALUES (6, 'Stuffed squid', 250, '/larnarhan/image-menus/img7.jpg');
-INSERT INTO `menus` VALUES (8, 'Thai Spring Roll ', 100, '/larnarhan/image-menus/img8.jpg');
+INSERT INTO `menus` VALUES (12, 'pp', 998, '/larnarhan/image-menus/39540.jpg');
+INSERT INTO `menus` VALUES (9, 'vfkh', 127653, '/larnarhan/image-menus/39543.jpg');
+INSERT INTO `menus` VALUES (10, 'bt', 56, '/larnarhan/image-menus/im8.jpg');
+INSERT INTO `menus` VALUES (11, 'bb', 34, '/larnarhan/image-menus/39542.jpg');
+INSERT INTO `menus` VALUES (13, '9945', 4421, '/larnarhan/image-menus/39552.jpg');
+INSERT INTO `menus` VALUES (14, 'lnb', 97, '/larnarhan/image-menus/2015-06-24 02.39.21 1.jpg');
+INSERT INTO `menus` VALUES (15, '.kj', 76, '/larnarhan/image-menus/2015-06-24 04.39.57 1.jpg');
+INSERT INTO `menus` VALUES (16, 'hjh', 66, '/larnarhan/image-menus/2015-06-24 02.38.34 1.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,7 @@ CREATE TABLE `personal` (
   `email` varchar(20) NOT NULL,
   `position` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 -- 
 -- dump ตาราง `personal`
@@ -65,6 +65,7 @@ CREATE TABLE `personal` (
 
 INSERT INTO `personal` VALUES (5, 'nankung', '1234', 'Thanchanok', 'Prathuangthip', 'Suphanburi', '0875431011', 'itimminent@hotmail.c', 'Customer');
 INSERT INTO `personal` VALUES (6, 'admin', 'admin', 'Armasung', 'Khunnan', 'BKK', '035451464', 'computer@hotmail.com', 'admin');
+INSERT INTO `personal` VALUES (7, 'q', 'q', 'q', 'q', 'qq1', 'q', 'q', '');
 
 -- --------------------------------------------------------
 
@@ -73,16 +74,21 @@ INSERT INTO `personal` VALUES (6, 'admin', 'admin', 'Armasung', 'Khunnan', 'BKK'
 -- 
 
 CREATE TABLE `reserve` (
-  `id_reserve` int(10) NOT NULL,
-  `day_reserve` int(20) NOT NULL,
-  `time_reserve` int(10) NOT NULL,
-  `people` int(10) NOT NULL,
+  `id_reserve` int(10) NOT NULL auto_increment,
+  `date_reserve` date NOT NULL,
+  `time_reserve` text NOT NULL,
+  `seat` int(10) NOT NULL,
   `id_personal` int(10) NOT NULL,
   PRIMARY KEY  (`id_reserve`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 -- 
 -- dump ตาราง `reserve`
 -- 
 
-INSERT INTO `reserve` VALUES (0, 12, 9, 12, 5);
+INSERT INTO `reserve` VALUES (1, '2016-04-02', '01:59:00', 2, 5);
+INSERT INTO `reserve` VALUES (15, '2016-04-24', '01:01', 1, 5);
+INSERT INTO `reserve` VALUES (14, '2016-04-04', '13:01', 1, 5);
+INSERT INTO `reserve` VALUES (9, '2016-04-07', '00:00', 4, 7);
+INSERT INTO `reserve` VALUES (13, '2016-03-28', '17:20', 1, 5);
+INSERT INTO `reserve` VALUES (12, '2016-04-05', '00:30', 8, 5);
