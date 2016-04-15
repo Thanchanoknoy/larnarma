@@ -1,0 +1,118 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #000000;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+}
+
+body, th, td, input, textarea, select {
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #7F7F7F;
+}
+
+p, blockquote, ul, ol, dl {
+	margin-top: 0px;
+	margin-bottom: 1em;
+	text-align: justify;
+}
+
+a {
+	color: #F4B880;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.link1 {
+	text-decoration: none;
+	color: #F06F02;
+}
+
+.link1:hover {
+	text-decoration: underline;
+}
+
+.text1 {
+	color: #4A8E4E;
+	font-size: 16px;
+}
+
+.text2 {
+	color: #F06F02;
+	font-size: 16px;
+}
+
+.text3 {
+	height: 50px;
+	font-size: 24px;
+	padding-left: 50px;
+	background: url(images/img1.gif) no-repeat left top;
+	color: #FFFFFF;
+}
+
+.bg1 { 	
+	background-color: #FFFFFF; 
+}
+
+.bg2 {  
+	background: url(images/img12.gif) repeat-y left; 
+}
+
+.bg3 {  
+	background: url(images/img2.gif); height: 50px; 
+}
+
+.bg4 {  
+	background: url(images/img3.gif); height: 50px; 
+}
+
+.bg5 {  
+	background: url(images/img4.gif); height: 50px; 
+}
+
+.bg6 {  
+	background: url(images/img5.gif); height: 50px; 
+}
+
+.bg7 {  
+	background: url(images/img6.gif); height: 50px; 
+}
+
+.align-justify { 
+	text-align: justify; 
+}
+
+.align-right { 
+	text-align: right; 
+}
+
+img { 
+	border: none; 
+}
+
+.img1 {
+	float: left;
+	margin: 3px 15px 0px 0px;
+}
+
+.img2 {
+	float: right;
+	margin: 3px 0px 0px 15px;
+}
+
+hr { display: none; }
+
+.hr1 {
+	height: 1px;
+}
+
