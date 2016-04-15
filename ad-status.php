@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (!isset($_SESSION['login'])) {
+  if (!isset($_SESSION['login']) || $_SESSION['position'] != 'admin') {
           echo "<script>alert('Login Again');</script>";
           echo "<script>window.location='ad-login.php';</script>";
       
@@ -113,28 +113,28 @@
                                 </h3>
                             </td>
                         </tr>
-
-        <div id="body" class="container-fluid">
-            <div class="row" style="float:right;">
-              <div class="col-md-12">     
-              <?php
-                echo $_SESSION['user']."&nbsp;";
-                if(isset($_SESSION['user'])){
-                  echo "<a href='ad-logout.php'> Log Out</a>";
-                }
-                      ?>
-              </div>  
-            </div>
-          </div>
                     </table>
                 </td>
               </tr>           
             </tr>
+    <div id="body" class="container-fluid">
+      <div class="row" style="float:right;">
+        <div class="col-md-12" style="color:white;font-size:16px;">     
+        <?php
+          echo $_SESSION['user']."&nbsp;";
+          if(isset($_SESSION['user'])){
+            echo "<a href='logout.php'> Log Out</a>";
+          }
+                ?>
+        </div>  
+      </div>
+    </div>
+    <tr><td><img src="images/img37.jpg" alt="" width="600" height="151"></td> </tr>
           </table>
 
 </div>
 </div> 
-<br><br><br><br>  
+<br> 
 <div class="row">
               <div class="col-md-4"></div>
                 <div class="col-md-4">

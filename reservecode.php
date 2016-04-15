@@ -13,5 +13,5 @@
 
 
     echo "<script>alert('You are success for reserve!');</script>";
-    echo "<script>window.location='login.php';</script>";
+    echo "<script>window.location='reserve.php';</script>";
 ?>

@@ -99,7 +99,7 @@
             <div class="row">
               <div class="col-md-offset-4 col-md-4">
                 <div class="col-md-offset-2 col-md-8">
-                    <button class="btn btn-warning btn-block">Log in</button>  
+                    <button class="btn btn-danger btn-block">Log in</button>  
                 </div>
               </div>
             </div>

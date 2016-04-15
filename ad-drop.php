@@ -1,12 +1,13 @@
 <?php
   session_start();
-  if (!isset($_SESSION['login'])) {
+  if (!isset($_SESSION['login']) || $_SESSION['position'] != 'admin') {
           echo "<script>alert('Login Again');</script>";
           echo "<script>window.location='ad-login.php';</script>";
       
   }
    
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +86,7 @@
 
        <div id="body" class="container-fluid">
             <div class="row" style="float:right;">
-              <div class="col-md-12">     
+              <div class="col-md-12" style="color:white;font-size:16px;">     
               <?php
                 echo $_SESSION['user']."&nbsp;";
                 if(isset($_SESSION['user'])){
@@ -103,17 +104,18 @@
 
  <?php
     
-            $m_host = "localhost"; 
-            $m_user = "root";
-            $m_pass = "123456"; 
-            $m_name = "dblarnarma";
-            /* select db then connect to db */     
-            $con = mysql_connect ($m_host,$m_user,$m_pass) or die("Could not connect to mysql " . mysql_error());
-            mysql_select_db ($m_name, $con) or die("Could not select database: $m_name " . mysql_error());  
-            $result = mysql_query("SELECT id,name,price,picture from menus");
-            $x=0;
-                while($row = mysql_fetch_array($result)){
-     
+    include 'Database.php';
+    $database = new Database();
+   
+    $name = $_REQUEST['menu'];
+   
+   // print_r("SELECT id,name,price,picture from menus");        
+    $result = $database->select("SELECT id,name,price,picture from menus");
+    if (mysqli_num_rows($result) > 0){
+        $x=0;
+        while($row = mysqli_fetch_array($result)){
+
+
                     $printid[$x]            = $row['id'];
                     $printname[$x]          = $row['name']; 
                     $printprice[$x]         = $row['price'];
@@ -121,6 +123,7 @@
                      
                     $x++;
                 }
+              }
 ?>
 
 <div class="container" style="margin-top:25px;">
@@ -167,6 +170,7 @@
 <?php
         }
 ?>
+
 </div>
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

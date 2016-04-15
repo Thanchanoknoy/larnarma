@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (!isset($_SESSION['login'])) {
+  if (!isset($_SESSION['login']) || $_SESSION['position'] != 'admin') {
           echo "<script>alert('Login Again');</script>";
           echo "<script>window.location='ad-login.php';</script>";
       
@@ -83,7 +83,7 @@
 
         <div id="body" class="container-fluid">
             <div class="row" style="float:right;">
-              <div class="col-md-12">     
+              <div class="col-md-12" style="color:white;font-size:16px;">     
               <?php
                 echo $_SESSION['user']."&nbsp;";
                 if(isset($_SESSION['user'])){

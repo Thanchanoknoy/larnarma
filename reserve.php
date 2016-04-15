@@ -77,7 +77,7 @@
           
     <div id="body" class="container-fluid">
       <div class="row" style="float:right;">
-        <div class="col-md-12">     
+        <div class="col-md-12" style="color:white;font-size:16px;">     
         <?php
           echo $_SESSION['user']."&nbsp;";
           if(isset($_SESSION['user'])){
@@ -131,7 +131,7 @@
                 <div class="row">
                   <div class="col-md-offset-4 col-md-4">
                     <div class="col-md-offset-2 col-md-8">
-                        <button class="btn btn-warning btn-block">OK</button> 
+                        <button class="btn btn-danger btn-block">OK</button> 
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="row">
                   <div class="col-md-offset-4 col-md-4">
                     <div class="col-md-offset-2 col-md-8">
-                        <a href="reserve2.php" class="btn btn-warning btn-block">Check</a>  
+                        <a href="reserve2.php" class="btn btn-danger btn-block">Check</a>  
                     </div>
                   </div>
                 </div>

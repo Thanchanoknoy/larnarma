@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (!isset($_SESSION['login'])) {
+  if (!isset($_SESSION['login']) || $_SESSION['position'] != 'admin') {
           echo "<script>alert('Login Again');</script>";
           echo "<script>window.location='ad-login.php';</script>";
       
@@ -76,6 +76,7 @@
                                 </h3>
                             </td>
                         </tr>
+
                     </table>
                 </td>
               </tr>           
@@ -83,7 +84,7 @@
 
      <div id="body" class="container-fluid">
           <div class="row" style="float:right;">
-            <div class="col-md-12">     
+            <div class="col-md-12"style=" color:white;font-size:16px;">     
             <?php
               echo $_SESSION['user']."&nbsp;";
               if(isset($_SESSION['user'])){
@@ -93,7 +94,7 @@
             </div>  
           </div>
         </div>
-            
+            <tr><td><img src="images/img35.jpg" alt="" width="600" height="201"></td> </tr>
           </table>
                   
 </div>
@@ -105,10 +106,10 @@
 <div class="container" style="margin-top:25px;">
     
     <div class="container-fluid">
-            <br> <br> <br> <br>
+            
         <div class="row">
-            <div class="col-md-2"></div>
-                <div class="col-md-7">
+            <div class="col-md-3"></div>
+                <div class="col-md-6">
                     <div class="panel panel-warning">
                         <div class="panel-heading style1">
                         <div align="left"><strong>New Menu</strong></div>

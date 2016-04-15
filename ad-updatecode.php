@@ -36,7 +36,7 @@ session_start();
         $x=0;
         while($row = mysqli_fetch_array($result)){
             $printname[$x]              = $row['name'];
-            $printprice[$x]              = $row['price'];
+            $printprice[$x]             = $row['price'];
             $printpicture[$x]           = $row['picture'];
             
             $x++;
@@ -96,7 +96,7 @@ session_start();
             </tr>
         <div id="body" class="container-fluid">
             <div class="row" style="float:right;">
-              <div class="col-md-12">     
+              <div class="col-md-12" style="color:white;font-size:16px;">     
               <?php
                 echo $_SESSION['user']."&nbsp;";
                 if(isset($_SESSION['user'])){
@@ -106,6 +106,7 @@ session_start();
               </div>  
             </div>
           </div>
+            <tr><td><img src="images/img36.jpg" alt="" width="600" height="201"></td> </tr>
           </table>
                   
 </div>
@@ -117,10 +118,10 @@ session_start();
 <div class="container" style="margin-top:25px;">
     
     <div class="container-fluid">
-            <br> <br> <br> <br>
+           
         <div class="row">
-            <div class="col-md-2"></div>
-                <div class="col-md-7">
+            <div class="col-md-3"></div>
+                <div class="col-md-6">
                     <div class="panel panel-warning">
                         <div class="panel-heading style1">
                         <div align="left"><strong>New Menu</strong></div>
@@ -159,7 +160,7 @@ session_start();
                                     </div> 
                                 </div>
                             </div>
-                            <input type = "hidden" name="oldname" value =<?php echo $_REQUEST['menu']; ?> 
+                            <input type = "hidden" name="oldname" value ="<?php echo $_REQUEST['menu']; ?>"
 
 
 

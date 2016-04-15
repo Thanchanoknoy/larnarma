@@ -1,3 +1,5 @@
+ เซิร์ฟเวอร์: localhost  -   ฐานข้อมูล: dblarnarma
+ 
 -- phpMyAdmin SQL Dump
 -- version 2.10.3
 -- http://www.phpmyadmin.net
@@ -25,20 +27,20 @@ CREATE TABLE `menus` (
   `price` int(20) NOT NULL,
   `picture` varchar(60) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 -- 
 -- dump ตาราง `menus`
 -- 
 
-INSERT INTO `menus` VALUES (12, 'pp', 998, '/larnarhan/image-menus/39540.jpg');
-INSERT INTO `menus` VALUES (9, 'vfkh', 127653, '/larnarhan/image-menus/39543.jpg');
-INSERT INTO `menus` VALUES (10, 'bt', 56, '/larnarhan/image-menus/im8.jpg');
-INSERT INTO `menus` VALUES (11, 'bb', 34, '/larnarhan/image-menus/39542.jpg');
-INSERT INTO `menus` VALUES (13, '9945', 4421, '/larnarhan/image-menus/39552.jpg');
-INSERT INTO `menus` VALUES (14, 'lnb', 97, '/larnarhan/image-menus/2015-06-24 02.39.21 1.jpg');
-INSERT INTO `menus` VALUES (15, '.kj', 76, '/larnarhan/image-menus/2015-06-24 04.39.57 1.jpg');
-INSERT INTO `menus` VALUES (16, 'hjh', 66, '/larnarhan/image-menus/2015-06-24 02.38.34 1.jpg');
+INSERT INTO `menus` VALUES (27, 'Steamed Blanched', 200, '/larnarhan/image-menus/img3.jpg');
+INSERT INTO `menus` VALUES (24, 'Fried Chicken', 150, '/larnarhan/image-menus/img6.jpg');
+INSERT INTO `menus` VALUES (23, 'Stuffed squid', 300, '/larnarhan/image-menus/img7.jpg');
+INSERT INTO `menus` VALUES (22, 'Thai Spring Roll', 150, '/larnarhan/image-menus/img8.jpg');
+INSERT INTO `menus` VALUES (21, 'Thai Fried Noodles ', 200, '/larnarhan/image-menus/img1.jpg');
+INSERT INTO `menus` VALUES (26, 'grilled prawns', 1200, '/larnarhan/image-menus/img2.jpg');
+INSERT INTO `menus` VALUES (19, 'Honey rost duck', 500, '/larnarhan/image-menus/img4.jpg');
+INSERT INTO `menus` VALUES (20, 'Tom Yum Kung', 300, '/larnarhan/image-menus/img5.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,7 +59,7 @@ CREATE TABLE `personal` (
   `email` varchar(20) NOT NULL,
   `position` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 -- 
 -- dump ตาราง `personal`
@@ -66,6 +68,12 @@ CREATE TABLE `personal` (
 INSERT INTO `personal` VALUES (5, 'nankung', '1234', 'Thanchanok', 'Prathuangthip', 'Suphanburi', '0875431011', 'itimminent@hotmail.c', 'Customer');
 INSERT INTO `personal` VALUES (6, 'admin', 'admin', 'Armasung', 'Khunnan', 'BKK', '035451464', 'computer@hotmail.com', 'admin');
 INSERT INTO `personal` VALUES (7, 'q', 'q', 'q', 'q', 'qq1', 'q', 'q', '');
+INSERT INTO `personal` VALUES (8, 'a', 'a', 'a', 'a', 'aa', '12', 'a', '');
+INSERT INTO `personal` VALUES (9, 'z', 'z', 'z', 'z', 'z', '11', 'z', '');
+INSERT INTO `personal` VALUES (10, 'v', 'v', 'vv', 'vv', 'v', 'v', 'v', '');
+INSERT INTO `personal` VALUES (11, 'd', 'd', 'dd', 'dd', 'dd', 'd', 'd', '');
+INSERT INTO `personal` VALUES (12, 'e', 'e', 'e', 'e', 'e', 'e', 'e', '');
+INSERT INTO `personal` VALUES (13, 'r', 'r', 'r', 'r', 'r', 'r', 'r', '');
 
 -- --------------------------------------------------------
 
@@ -80,15 +88,20 @@ CREATE TABLE `reserve` (
   `seat` int(10) NOT NULL,
   `id_personal` int(10) NOT NULL,
   PRIMARY KEY  (`id_reserve`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 -- 
 -- dump ตาราง `reserve`
 -- 
 
 INSERT INTO `reserve` VALUES (1, '2016-04-02', '01:59:00', 2, 5);
+INSERT INTO `reserve` VALUES (19, '2016-04-05', '04:04', 4, 13);
+INSERT INTO `reserve` VALUES (18, '2016-04-12', '04:04', 1, 11);
+INSERT INTO `reserve` VALUES (17, '2016-04-26', '14:02', 1, 9);
+INSERT INTO `reserve` VALUES (16, '2016-04-03', '14:30', 7, 7);
 INSERT INTO `reserve` VALUES (15, '2016-04-24', '01:01', 1, 5);
 INSERT INTO `reserve` VALUES (14, '2016-04-04', '13:01', 1, 5);
 INSERT INTO `reserve` VALUES (9, '2016-04-07', '00:00', 4, 7);
 INSERT INTO `reserve` VALUES (13, '2016-03-28', '17:20', 1, 5);
 INSERT INTO `reserve` VALUES (12, '2016-04-05', '00:30', 8, 5);
+

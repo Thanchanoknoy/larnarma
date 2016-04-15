@@ -107,10 +107,10 @@
 
      <div id="body" class="container-fluid">
       <div class="row" style="float:right;">
-        <div class="col-md-12">     
+        <div class="col-md-12" style="color:white;font-size:16px;">     
         <?php
-          echo $_SESSION['user']."&nbsp;".$_SESSION['position']."&nbsp;&nbsp;";
-          if(isset($_SESSION['user'])&&isset($_SESSION['position'])){
+          echo $_SESSION['user']."&nbsp;";
+          if(isset($_SESSION['user'])){
             echo "<a href='logout.php'> Log Out</a>";
           }
                 ?>

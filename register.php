@@ -148,7 +148,7 @@
                 <div class="row">
                   <div class="col-md-offset-4 col-md-4">
                     <div class="col-md-offset-2 col-md-8">
-                        <button class="btn btn-warning btn-block">OK</button>  
+                        <button class="btn btn-danger btn-block">OK</button>  
                     </div>
                   </div>
                 </div>
